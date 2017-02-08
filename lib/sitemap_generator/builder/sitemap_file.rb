@@ -141,6 +141,11 @@ module SitemapGenerator
         @written = true
       end
 
+      # Print out the current sitemap as an XML string
+      def to_xml
+        @xml_wrapper_start + @xml_content + @xml_wrapper_end
+      end
+
       # Return true if this file has been written out to disk
       def written?
         @written
